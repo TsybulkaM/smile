@@ -61,7 +61,7 @@ public class BagOfWordsTest {
 
     @Test
     public void testFeature() throws IOException {
-        System.out.println("feature");
+        //System.out.println("feature");
         String[][] text = smile.io.Paths.getTestDataLines("text/movie.txt")
                 .map(String::trim)
                 .filter(line -> !line.isEmpty())
