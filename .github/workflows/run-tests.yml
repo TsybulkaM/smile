@@ -25,6 +25,11 @@ jobs:
           node-version: 24
       - uses: gradle/actions/setup-gradle@v5
 
+      - name: Install native dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y libopenblas-dev libarpack2
+
       - name: Show branch info
         run: |
           echo "GITHUB_REF=${GITHUB_REF}"
